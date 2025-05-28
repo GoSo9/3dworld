@@ -3,32 +3,33 @@ import { OrbitControls } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
-function Model() {
-  const { scene } = useGLTF("/models/bobject.glb");
-  return (
-    <primitive
-      object={scene}
-      scale={0.5}
-      position={[0, 0, 0]}
-      castShadow
-      receiveShadow
-    />
-  );
-}
+// function Model() {
+//   //const { scene } = useGLTF("/models/bobject.glb");
+//   const { scene } = useGLTF("/models/blenderFile_v2.glb");
+//   return (
+//     <primitive
+//       object={scene}
+//       scale={0.5}
+//       position={[0, 0, 0]}
+//       castShadow
+//       receiveShadow
+//     />
+//   );
+// }
 
-function Box() {
-  return (
-    <mesh>
-      <boxGeometry />
-      <meshStandardMaterial color="orange" />
-    </mesh>
-  );
-}
+// function Box() {
+//   return (
+//     <mesh>
+//       <boxGeometry />
+//       <meshStandardMaterial color="orange" />
+//     </mesh>
+//   );
+// }
 
 function AnimatedModel() {
-  const group = useRef();
+  const group = useRef(null);
   const { scene, animations } = useGLTF("/models/bobject.glb");
-  const { actions, mixer } = useAnimations(animations, group);
+  const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
     // Play the first animation
