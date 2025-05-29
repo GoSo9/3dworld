@@ -32,6 +32,7 @@ function AnimatedModel() {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
+    //document.title = "My Page Title";
     // Play the first animation
     if (actions && Object.keys(actions).length > 0) {
       actions[Object.keys(actions)[0]].play();
