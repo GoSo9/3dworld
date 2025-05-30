@@ -9,9 +9,6 @@ Currently, two official plugins are available:
 
 ## Expanding the ESLint configuration
 
-https://github.com/GoSo9/3dworld.git
-htdRz5r9nXic6i@
-
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
 ```js
